@@ -147,10 +147,7 @@ export default function IAPage() {
 
   return (
     <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-      <style suppressHydrationWarning>{`
+      <style>{`
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
         body { font-family:'Open Sans',Arial,sans-serif; background:#fff; color:#333; overflow-x:hidden; }
