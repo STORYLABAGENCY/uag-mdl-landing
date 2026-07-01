@@ -344,7 +344,7 @@ export default function IAPage() {
 
           {/* Formulario Zoho */}
           <div style={{ background:"rgba(255,255,255,0.08)", borderRadius:"12px", padding:"1rem 1.2rem", border:"1px solid rgba(255,255,255,0.15)" }}>
-            <div id="uagForma" style={{ minHeight:"200px" }} />
+            <div id="uagFormaMDL" style={{ minHeight:"200px" }} />
           </div>
         </div>
       </section>
@@ -922,13 +922,13 @@ export default function IAPage() {
                 jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
                 jq.onload = function() {
                   var s = document.createElement('script');
-                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
+                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagFormaMDL&campus=VIR&nivel=MA&programa=OML26';
                   document.body.appendChild(s);
                 };
                 document.head.appendChild(jq);
               } else {
                 var s = document.createElement('script');
-                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
+                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagFormaMDL&campus=VIR&nivel=MA&programa=OML26';
                 document.body.appendChild(s);
               }
             }
