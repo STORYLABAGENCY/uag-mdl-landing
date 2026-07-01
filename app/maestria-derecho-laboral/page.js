@@ -120,6 +120,29 @@ export default function IAPage() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
+  // Cargar Zoho via useEffect — espera a que el div#uagForma esté en el DOM
+  useEffect(() => {
+    let attempts = 0;
+    const tryLoad = () => {
+      const div = document.getElementById('uagForma');
+      if (!div && attempts < 20) {
+        attempts++;
+        setTimeout(tryLoad, 300);
+        return;
+      }
+      // Cargar jQuery primero, luego Zoho
+      const jq = document.createElement('script');
+      jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+      jq.onload = () => {
+        const s = document.createElement('script');
+        s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
+        document.body.appendChild(s);
+      };
+      document.head.appendChild(jq);
+    };
+    tryLoad();
+  }, []);
+
   // Cargar script de Zoho — via componente Script de Next.js
 
   useEffect(() => {
@@ -903,40 +926,7 @@ export default function IAPage() {
         </div>
       )}
 
-      {/* jQuery + Zoho en secuencia garantizada */}
-      <Script
-        id="zoho-forma"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            function loadZoho() {
-              if (typeof $ === 'undefined') {
-                var jq = document.createElement('script');
-                jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
-                jq.onload = function() {
-                  setTimeout(function() {
-                    var s = document.createElement('script');
-                    s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
-                    document.body.appendChild(s);
-                  }, 500);
-                };
-                document.head.appendChild(jq);
-              } else {
-                setTimeout(function() {
-                  var s = document.createElement('script');
-                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
-                  document.body.appendChild(s);
-                }, 500);
-              }
-            }
-            if (document.readyState === 'complete') {
-              loadZoho();
-            } else {
-              window.addEventListener('load', loadZoho);
-            }
-          `
-        }}
-      />
+      {/* Zoho se carga via useEffect en el componente */}
     </>
   );
 }
