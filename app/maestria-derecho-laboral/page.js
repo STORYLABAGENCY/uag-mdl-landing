@@ -144,7 +144,7 @@ export default function IAPage() {
   };
 
   return (
-    <>
+    <div suppressHydrationWarning>
       <style>{`
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
@@ -940,7 +940,7 @@ export default function IAPage() {
           `
         }}
       />
-    </>
+    </div>
   );
 }
 // deploy 06/24/2026 07:07:00
