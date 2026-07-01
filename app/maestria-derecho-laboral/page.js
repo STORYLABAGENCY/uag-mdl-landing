@@ -322,7 +322,7 @@ export default function IAPage() {
         {/* IZQUIERDA — imagen, oculta en móvil */}
         <div className="hero-img-col" style={{ position:"relative", overflow:"hidden", minHeight:"480px" }}>
           <img
-            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/Online-.png"
+            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/IMAGEN%203.1.png"
             alt="Maestría en Administración Pública UAG"
             style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 30%", display:"block" }}
           />
@@ -911,13 +911,13 @@ export default function IAPage() {
                 jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
                 jq.onload = function() {
                   var s = document.createElement('script');
-                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=auDtk8GCw5&t=uagForma&campus=VIR&nivel=MA&programa=OMB26';
+                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
                   document.body.appendChild(s);
                 };
                 document.head.appendChild(jq);
               } else {
                 var s = document.createElement('script');
-                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=auDtk8GCw5&t=uagForma&campus=VIR&nivel=MA&programa=OMB26';
+                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
                 document.body.appendChild(s);
               }
             }
