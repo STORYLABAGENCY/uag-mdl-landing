@@ -109,7 +109,6 @@ export default function IAPage() {
   const [videoOpen, setVideoOpen]   = useState(false);
   const [testVideo, setTestVideo]     = useState(null);
   const admRef                      = useRef(null);
-  const audioRef                    = useRef(null);
   const [admVisible, setAdmVisible] = useState(false);
 
   useEffect(() => {
