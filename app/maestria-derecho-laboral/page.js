@@ -11,9 +11,9 @@ const supabase = createClient(
 const LOGO_URL = "https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/online%20logo%201%20(1).png";
 
 const RAZONES = [
-  { num:"01", titulo:"Derecho laboral estratégico para organizaciones modernas", desc:"Aprende a prevenir riesgos laborales, fortalecer el cumplimiento normativo y gestionar relaciones laborales con una visión estratégica que va más allá del litigio tradicional." },
-  { num:"02", titulo:"Prevención, negociación y resolución de conflictos", desc:"Desarrolla competencias para actuar en todas las etapas de una relación laboral mediante estrategias de prevención, conciliación, negociación colectiva y defensa jurídica." },
-  { num:"03", titulo:"Visión internacional del derecho laboral", desc:"Analiza los retos del T-MEC, las tendencias internacionales y las nuevas regulaciones laborales para responder a los desafíos de organizaciones con una perspectiva global." },
+  { num:"01", titulo:"Planeación fiscal estratégica y compliance", desc:"Aprende a diseñar estrategias tributarias, optimizar cargas fiscales dentro del marco legal y gestionar riesgos fiscales con una visión preventiva y estratégica." },
+  { num:"02", titulo:"Defensa del contribuyente y litigio fiscal", desc:"Fortalece tus competencias para proteger jurídicamente a los contribuyentes mediante medios de defensa, mecanismos de conciliación y argumentación estratégica frente a actos de autoridad." },
+  { num:"03", titulo:"Fiscalidad internacional y comercio exterior", desc:"Desarrolla una visión integral para asesorar organizaciones con operaciones internacionales, comprendiendo el impacto fiscal del comercio exterior, la movilidad global y los nuevos entornos digitales." },
   { num:"04", titulo:"Flexibilidad con acompañamiento real", desc:"Estudia 100% online con clases en vivo y grabadas, organiza tu tiempo y avanza con el acompañamiento de un Coach Académico. Además, tendrás acceso a Canvas, Microsoft 365 y LINC para aprender, colaborar y recibir asesorías personalizadas desde cualquier lugar y a tu propio ritmo." },
 ];
 
@@ -55,15 +55,16 @@ const ICON_GEN = () => (
 );
 
 const HABILIDADES = [
-  { icon:<ICON_IA/>, titulo:"Previene riesgos laborales", desc:"Diseña estrategias para fortalecer el cumplimiento normativo y reducir contingencias laborales en las organizaciones." },
-  { icon:<ICON_DATA/>, titulo:"Gestiona relaciones laborales", desc:"Implementa estrategias que promuevan relaciones de trabajo justas, seguras y alineadas con la legislación vigente." },
-  { icon:<ICON_VISION/>, titulo:"Resuelve conflictos laborales", desc:"Aplica mecanismos de conciliación, negociación y litigación estratégica para resolver controversias laborales de manera efectiva." },
-  { icon:<ICON_GEN/>, titulo:"Lidera el cumplimiento normativo", desc:"Analiza riesgos legales y fortalece la seguridad jurídica mediante estrategias de compliance laboral y mejora organizacional." },
+  { icon:<ICON_IA/>, titulo:"Diseña estrategias fiscales", desc:"Diseña soluciones tributarias alineadas al marco legal para generar certeza jurídica y fortalecer la competitividad de las organizaciones." },
+  { icon:<ICON_DATA/>, titulo:"Analiza y procesa datos", desc:"Analizar y procesar grandes volúmenes de datos para generar soluciones y apoyar la toma de decisiones." },
+  { icon:<ICON_VISION/>, titulo:"Visión artificial y NLP", desc:"Desarrollar aplicaciones de visión artificial y procesamiento de lenguaje natural." },
+  { icon:<ICON_GEN/>, titulo:"IA generativa", desc:"Implementar modelos de IA generativa y tecnologías emergentes en distintos sectores productivos." },
 ];
 
 const CAMPO = [
-  "Estrategia y cumplimiento laboral","Negociación colectiva",
-  "Justicia laboral",
+  "Consultoría y planeación fiscal estratégica","Litigio fiscal y defensa del contribuyente",
+  "Fiscalidad internacional, digital y constitucional","Compliance y gestión de riesgos tributarios",
+  "Asesoría fiscal corporativa","Administración tributaria pública",
 ];
 
 const MODALIDAD = [
@@ -73,12 +74,12 @@ const MODALIDAD = [
 ];
 
 const PLAN = [
-  { c:1, materias:["Teoría general del derecho laboral y justicia social","Liderazgo innovador para el desarrollo profesional"] },
-  { c:2, materias:["Relaciones laborales y nuevos modelos de contratación","Tópicos selectos 1"] },
-  { c:3, materias:["La seguridad social en las relaciones laborales","Tópicos selectos 2"] },
-  { c:4, materias:["Gestión del riesgo laboral y compliance","Tópicos selectos 3"] },
-  { c:5, materias:["Medios alternos de resolución de conflictos laborales","Tópicos selectos 4"] },
-  { c:6, materias:["Litigación laboral estratégica","Proyecto aplicado"] },
+  { c:1, materias:["Fundamentos constitucionales de las contribuciones","Liderazgo innovador para el desarrollo profesional"] },
+  { c:2, materias:["Código fiscal de la federación","Tópicos selectos 1"] },
+  { c:3, materias:["Impuestos directos e indirectos","Tópicos selectos 2"] },
+  { c:4, materias:["Planeación fiscal estratégica y compliance","Tópicos selectos 3"] },
+  { c:5, materias:["Delitos fiscales","Tópicos selectos 4"] },
+  { c:6, materias:["Medios de defensa judicial","Proyecto aplicado"] },
 ];
 
 const TESTIMONIOS = [
@@ -132,7 +133,7 @@ export default function IAPage() {
       const { error } = await supabase.from("solicitudes").insert([{
         nombre:formData.nombre, email:formData.email,
         telefono:formData.telefono,
-        programa:"Maestría en Derecho Laboral",
+        programa:"Maestría en Derecho Fiscal",
         fecha:new Date().toISOString()
       }]);
       if(error) throw error;
@@ -143,7 +144,7 @@ export default function IAPage() {
   };
 
   return (
-    <div suppressHydrationWarning>
+    <>
       <style>{`
         *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
@@ -320,7 +321,7 @@ export default function IAPage() {
         {/* IZQUIERDA — imagen, oculta en móvil */}
         <div className="hero-img-col" style={{ position:"relative", overflow:"hidden", minHeight:"480px" }}>
           <img
-            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/IMAGEN%203.1.png"
+            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/lawyer.png"
             alt="Estudiante UAG Online"
             style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 30%", display:"block" }}
           />
@@ -332,18 +333,18 @@ export default function IAPage() {
 
           {/* Headline */}
           <h1 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.3rem,2.2vw,2rem)", fontWeight:900, color:"#fff", lineHeight:1.12, letterSpacing:"-0.01em", marginBottom:"0.8rem" }}>
-            Lidera las relaciones laborales del futuro con la{" "}
-            <span style={{ color:"#f59700" }}>Maestría en Derecho Laboral</span>{" "}
+            Domina la estrategia fiscal y protege el crecimiento de las organizaciones con la{" "}
+            <span style={{ color:"#f59700" }}>Maestría en Derecho Fiscal</span>{" "}
             Online de la UAG
           </h1>
 
           <p style={{ fontSize:"0.93rem", color:"rgba(255,255,255,0.78)", lineHeight:1.6, marginBottom:"1.4rem" }}>
-            Fortalece el cumplimiento normativo, prevén riesgos laborales y resuelve conflictos con una visión estratégica y jurídica para impulsar organizaciones más justas, seguras y sostenibles, sin dejar de trabajar.
+            Diseña estrategias fiscales, prevén riesgos tributarios y fortalece la defensa jurídica de personas y organizaciones con una visión estratégica y de cumplimiento, sin dejar de trabajar.
           </p>
 
           {/* Formulario Zoho */}
           <div style={{ background:"rgba(255,255,255,0.08)", borderRadius:"12px", padding:"1rem 1.2rem", border:"1px solid rgba(255,255,255,0.15)" }}>
-            <div id="uagFormaMDL" style={{ minHeight:"200px" }} />
+            <div id="uagForma" style={{ minHeight:"200px" }} />
           </div>
         </div>
       </section>
@@ -354,10 +355,10 @@ export default function IAPage() {
         <div className="intro-benefit-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"3rem", alignItems:"center", marginBottom:"3rem" }}>
           <div>
             <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.2rem,2.5vw,1.7rem)", fontWeight:800, color:"#333", lineHeight:1.3, marginBottom:"1rem" }}>
-              Construye organizaciones más justas, seguras y sostenibles.
+              Lidera la estrategia fiscal con visión jurídica y empresarial.
             </p>
             <p style={{ fontSize:"0.92rem", color:"#555", lineHeight:1.8, marginBottom:"1rem" }}>
-              Aquí no solo estudias Derecho Laboral: te preparas para prevenir riesgos, fortalecer el cumplimiento normativo y resolver conflictos laborales con una visión estratégica. Con el respaldo de la UAG y Arizona State University, desarrollarás las competencias para liderar relaciones laborales en organizaciones modernas.
+              Aquí no solo estudias Derecho Fiscal: te preparas para diseñar estrategias tributarias, prevenir riesgos fiscales y defender jurídicamente los intereses de personas y organizaciones. Con el respaldo de la UAG y Arizona State University, desarrollarás una visión integral del cumplimiento fiscal, el litigio y la fiscalidad internacional.
             </p>
           </div>
           {/* Métricas de social proof — MEJORA 5 */}
@@ -376,13 +377,13 @@ export default function IAPage() {
         </div>
 
         <div style={{ paddingTop:"2.5rem", borderTop:"2px solid #f59700" }}>
-          <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.05rem", fontWeight:700, color:"#f59700", marginBottom:"0.3rem" }}>Transforma, Previene y Lidera</p>
+          <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.05rem", fontWeight:700, color:"#f59700", marginBottom:"0.3rem" }}>Estrategia, Certeza y Valor</p>
           <h2 style={{ fontSize:"clamp(1.4rem,3vw,2rem)", fontWeight:800, color:"#333", marginBottom:"2rem", lineHeight:1.3 }}>
-            Forma parte de la generación que transforma las relaciones laborales con visión estratégica, jurídica y humana.
+            Forma parte de la generación que transforma la estrategia fiscal en certeza jurídica y valor para las organizaciones.
           </h2>
 
           <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.05rem", fontWeight:700, color:"#555", fontStyle:"italic", marginBottom:"1.5rem" }}>
-            ¿Por qué estudiar la Maestría en Derecho Laboral Online en la UAG?
+            ¿Por qué estudiar la Maestría en Derecho Fiscal Online en la UAG?
           </p>
 
           <div style={{ display:"flex", flexDirection:"column" }}>
@@ -608,13 +609,13 @@ export default function IAPage() {
                 width:"36px", height:"36px", borderRadius:"50%", display:"flex", alignItems:"center",
                 justifyContent:"center", fontSize:"1.4rem", fontWeight:900, lineHeight:1 }}>❝</div>
               <p style={{ fontSize:"1.05rem", color:"#333", lineHeight:1.75, fontStyle:"italic", marginBottom:"1.2rem", marginTop:"0.5rem" }}>
-                "La Maestría en Derecho Laboral de UAG Online me dio las herramientas para gestionar conflictos laborales con visión estratégica. Un programa que va mucho más allá del litigio."
+                "La Maestría en Derecho Fiscal de UAG Online me dio las herramientas para diseñar estrategias tributarias con visión internacional. Una formación que realmente transforma tu práctica profesional."
               </p>
               <div style={{ display:"flex", alignItems:"center", gap:"0.8rem" }}>
                 <div style={{ width:"44px", height:"44px", borderRadius:"50%", background:"#7a2531", display:"flex", alignItems:"center", justifyContent:"center", fontFamily:"'Outfit',sans-serif", fontWeight:800, color:"#fff", fontSize:"1.1rem", flexShrink:0 }}>M</div>
                 <div>
-                  <p style={{ fontFamily:"'Outfit',sans-serif", fontWeight:700, fontSize:"0.93rem", color:"#333" }}>Laura P. Sánchez</p>
-                  <p style={{ fontSize:"0.76rem", color:"#888" }}>Egresada UAG Online · Maestría en Derecho Laboral</p>
+                  <p style={{ fontFamily:"'Outfit',sans-serif", fontWeight:700, fontSize:"0.93rem", color:"#333" }}>Roberto E. Garza</p>
+                  <p style={{ fontSize:"0.76rem", color:"#888" }}>Egresado UAG Online · Maestría en Derecho Fiscal</p>
                 </div>
                 <div style={{ marginLeft:"auto", textAlign:"right" }}>
                   <p style={{ fontFamily:"'Outfit',sans-serif", fontWeight:900, fontSize:"1.1rem", color:"#f59700" }}>★★★★★</p>
@@ -869,7 +870,7 @@ export default function IAPage() {
       <section style={{ padding:"5rem 2rem", background:"#fff", borderTop:"4px solid #f59700", textAlign:"center" }}>
         <div style={{ maxWidth:"700px", margin:"0 auto" }}>
           <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.5rem,4vw,2.4rem)", fontWeight:900, color:"#333", marginBottom:"0.8rem", lineHeight:1.1 }}>
-            ¿Listo para liderar las relaciones laborales del futuro?
+            ¿Listo para dominar la estrategia fiscal que protege y hace crecer las organizaciones?
           </h2>
           <p style={{ fontSize:"1.05rem", color:"#777", marginBottom:"2.5rem", lineHeight:1.7 }}>
             Inicio 7 de septiembre de 2026 · Beca + Bono disponibles
@@ -921,13 +922,13 @@ export default function IAPage() {
                 jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
                 jq.onload = function() {
                   var s = document.createElement('script');
-                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagFormaMDL&campus=VIR&nivel=MA&programa=OML26';
+                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=LQMP7KKOcL&t=uagForma&campus=VIR&nivel=MA&programa=OMF26';
                   document.body.appendChild(s);
                 };
                 document.head.appendChild(jq);
               } else {
                 var s = document.createElement('script');
-                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagFormaMDL&campus=VIR&nivel=MA&programa=OML26';
+                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=LQMP7KKOcL&t=uagForma&campus=VIR&nivel=MA&programa=OMF26';
                 document.body.appendChild(s);
               }
             }
@@ -939,7 +940,7 @@ export default function IAPage() {
           `
         }}
       />
-    </div>
+    </>
   );
 }
 // deploy 06/24/2026 07:07:00
