@@ -109,6 +109,7 @@ export default function IAPage() {
   const [videoOpen, setVideoOpen]   = useState(false);
   const [testVideo, setTestVideo]     = useState(null);
   const admRef                      = useRef(null);
+  const audioRef                    = useRef(null);
   const [admVisible, setAdmVisible] = useState(false);
 
   useEffect(() => {
@@ -526,6 +527,18 @@ export default function IAPage() {
                         <div>
                           <p style={{ fontFamily:"'Outfit',sans-serif", fontWeight:700, fontSize:"0.9rem", color:"#333" }}>Maya IA</p>
                           <p style={{ fontSize:"0.72rem", color:"#888" }}>Asistente de inglés UAG · ASU · Disponible 24/7</p>
+                        </div>
+                        <div style={{ position:"relative", marginLeft:"auto", cursor:"pointer" }}
+                          onMouseEnter={e=>{ audioRef.current?.play(); }}
+                          onMouseLeave={e=>{ const a=audioRef.current; if(a){a.pause();a.currentTime=0;} }}>
+                          <div style={{ width:"40px", height:"40px", borderRadius:"50%", background:"#7a2531", border:"2px solid #f59700", display:"flex", alignItems:"center", justifyContent:"center" }}>
+                            <div style={{ display:"flex", gap:"2px", alignItems:"center", height:"18px" }}>
+                              {[10,16,10,18,12].map((_,i)=>(
+                                <div key={i} style={{ width:"3px", borderRadius:"2px", background:"#f59700", height:`${[10,16,10,18,12][i]}px`, animation:`mayaBar${i%5} ${0.55+(i*0.07)}s ease-in-out infinite` }} />
+                              ))}
+                            </div>
+                          </div>
+                          <audio ref={audioRef} preload="auto"><source src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/UAG_1.mp3" type="audio/mpeg" /></audio>
                         </div>
                       </div>
                       {[["Maya","¡Hola! Hoy practicaremos listening. ¿Listo?",false],["Tú","Yes, I'm ready!",true],["Maya","Great! Describe your ideal workplace in 3 sentences.",false]].map(([who,msg,isMe],i)=>(
