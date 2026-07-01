@@ -12,8 +12,8 @@ const LOGO_URL = "https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/pub
 
 const RAZONES = [
   { num:"01", titulo:"Derecho laboral estratégico para organizaciones modernas", desc:"Aprende a prevenir riesgos laborales, fortalecer el cumplimiento normativo y gestionar relaciones laborales con una visión estratégica que va más allá del litigio tradicional." },
-  { num:"02", titulo:"Actualización en T-MEC y derecho laboral internacional", desc:"Desarrolla una perspectiva global del derecho laboral mediante el análisis de estándares internacionales, nuevas regulaciones y tendencias que impactan a las organizaciones modernas." },
-  { num:"03", titulo:"Equilibrio entre prevención, negociación y litigio", desc:"Fortalece tus competencias para actuar en todas las etapas de una relación laboral: prevención, conciliación, negociación colectiva y defensa jurídica." },
+  { num:"02", titulo:"Prevención, negociación y resolución de conflictos", desc:"Desarrolla competencias para actuar en todas las etapas de una relación laboral mediante estrategias de prevención, conciliación, negociación colectiva y defensa jurídica." },
+  { num:"03", titulo:"Visión internacional del derecho laboral", desc:"Analiza los retos del T-MEC, las tendencias internacionales y las nuevas regulaciones laborales para responder a los desafíos de organizaciones con una perspectiva global." },
   { num:"04", titulo:"Flexibilidad con acompañamiento real", desc:"Estudia 100% online con clases en vivo y grabadas, organiza tu tiempo y avanza con el acompañamiento de un Coach Académico. Además, tendrás acceso a Canvas, Microsoft 365 y LINC para aprender, colaborar y recibir asesorías personalizadas desde cualquier lugar y a tu propio ritmo." },
 ];
 
@@ -55,16 +55,15 @@ const ICON_GEN = () => (
 );
 
 const HABILIDADES = [
-  { icon:<ICON_IA/>, titulo:"Previene y gestiona riesgos laborales", desc:"Diseñar estrategias de prevención, cumplimiento normativo y gestión de relaciones laborales con visión estratégica y jurídica." },
-  { icon:<ICON_DATA/>, titulo:"Analiza y procesa datos", desc:"Analizar y procesar grandes volúmenes de datos para generar soluciones y apoyar la toma de decisiones." },
-  { icon:<ICON_VISION/>, titulo:"Visión artificial y NLP", desc:"Desarrollar aplicaciones de visión artificial y procesamiento de lenguaje natural." },
-  { icon:<ICON_GEN/>, titulo:"IA generativa", desc:"Implementar modelos de IA generativa y tecnologías emergentes en distintos sectores productivos." },
+  { icon:<ICON_IA/>, titulo:"Previene riesgos laborales", desc:"Diseña estrategias para fortalecer el cumplimiento normativo y reducir contingencias laborales en las organizaciones." },
+  { icon:<ICON_DATA/>, titulo:"Gestiona relaciones laborales", desc:"Implementa estrategias que promuevan relaciones de trabajo justas, seguras y alineadas con la legislación vigente." },
+  { icon:<ICON_VISION/>, titulo:"Resuelve conflictos laborales", desc:"Aplica mecanismos de conciliación, negociación y litigación estratégica para resolver controversias laborales de manera efectiva." },
+  { icon:<ICON_GEN/>, titulo:"Lidera el cumplimiento normativo", desc:"Analiza riesgos legales y fortalece la seguridad jurídica mediante estrategias de compliance laboral y mejora organizacional." },
 ];
 
 const CAMPO = [
   "Estrategia y cumplimiento laboral","Negociación colectiva",
-  "Justicia laboral","Consultoría en relaciones laborales",
-  "Prevención de riesgos laborales","Recursos Humanos y Compliance",
+  "Justicia laboral",
 ];
 
 const MODALIDAD = [
@@ -339,7 +338,7 @@ export default function IAPage() {
           </h1>
 
           <p style={{ fontSize:"0.93rem", color:"rgba(255,255,255,0.78)", lineHeight:1.6, marginBottom:"1.4rem" }}>
-            Analiza, previene y resuelve conflictos laborales con visión estratégica y jurídica, promoviendo relaciones de trabajo justas, seguras y alineadas a la normativa vigente — sin dejar de trabajar.
+            Fortalece el cumplimiento normativo, prevén riesgos laborales y resuelve conflictos con una visión estratégica y jurídica para impulsar organizaciones más justas, seguras y sostenibles, sin dejar de trabajar.
           </p>
 
           {/* Formulario Zoho */}
@@ -355,10 +354,10 @@ export default function IAPage() {
         <div className="intro-benefit-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"3rem", alignItems:"center", marginBottom:"3rem" }}>
           <div>
             <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.2rem,2.5vw,1.7rem)", fontWeight:800, color:"#333", lineHeight:1.3, marginBottom:"1rem" }}>
-              Construye entornos laborales más justos, seguros y sostenibles.
+              Construye organizaciones más justas, seguras y sostenibles.
             </p>
             <p style={{ fontSize:"0.92rem", color:"#555", lineHeight:1.8, marginBottom:"1rem" }}>
-              Aquí no solo estudias derecho laboral — te formas como especialista capaz de analizar, prevenir y resolver conflictos laborales mediante la aplicación estratégica del marco jurídico laboral, promoviendo relaciones de trabajo justas, seguras y alineadas a los principios de legalidad, equidad y justicia social.
+              Aquí no solo estudias Derecho Laboral: te preparas para prevenir riesgos, fortalecer el cumplimiento normativo y resolver conflictos laborales con una visión estratégica. Con el respaldo de la UAG y Arizona State University, desarrollarás las competencias para liderar relaciones laborales en organizaciones modernas.
             </p>
           </div>
           {/* Métricas de social proof — MEJORA 5 */}
@@ -366,7 +365,7 @@ export default function IAPage() {
             {[
               { num:"100%", label:"Online: Estudia desde cualquier lugar con clases en vivo y grabadas", color:"#7a2531" },
               { num:"6", label:"Cuatrimestres: Concluye tu maestría en 2 años", color:"#f59700" },
-              { num:"5", label:"Especializaciones: Relaciones laborales, Conciliación, Compliance, Litigación y Proyecto aplicado", color:"#7a2531" },
+              { num:"81%", label:"de alumnos trabajan mientras estudian", color:"#7a2531" },
             ].map((m,i)=>(
               <div key={i} style={{ padding:"1.2rem", background:"#f9f9f9", borderRadius:"10px", border:`2px solid ${m.color}22` }}>
                 <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.8rem", fontWeight:900, color:m.color, lineHeight:1, marginBottom:"0.3rem" }}>{m.num}</p>
