@@ -910,15 +910,19 @@ export default function IAPage() {
                 var jq = document.createElement('script');
                 jq.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
                 jq.onload = function() {
-                  var s = document.createElement('script');
-                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
-                  document.body.appendChild(s);
+                  setTimeout(function() {
+                    var s = document.createElement('script');
+                    s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
+                    document.body.appendChild(s);
+                  }, 500);
                 };
                 document.head.appendChild(jq);
               } else {
-                var s = document.createElement('script');
-                s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
-                document.body.appendChild(s);
+                setTimeout(function() {
+                  var s = document.createElement('script');
+                  s.src = 'https://www.uag.mx/api/formas/forma_v2?f=JpbCZBasQt&t=uagForma&campus=VIR&nivel=MA&programa=OML26';
+                  document.body.appendChild(s);
+                }, 500);
               }
             }
             if (document.readyState === 'complete') {
