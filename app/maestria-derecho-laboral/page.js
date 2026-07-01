@@ -110,6 +110,8 @@ export default function IAPage() {
   const [testVideo, setTestVideo]     = useState(null);
   const admRef                      = useRef(null);
   const audioRef                    = useRef(null);
+  const [mounted, setMounted]       = useState(false);
+  useEffect(()=>{ setMounted(true); }, []);
   const [admVisible, setAdmVisible] = useState(false);
 
   useEffect(() => {
@@ -305,7 +307,7 @@ export default function IAPage() {
       `}</style>
 
       {/* ── NAV ── */}
-      <nav className={`nav-ia ${scrollY>50?"scrolled":""}`}>
+      <nav className={`nav-ia ${mounted && scrollY>50?"scrolled":""}`}>
         <img
           src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/Logo%20UAG-01.png"
           alt="UAG Online"
