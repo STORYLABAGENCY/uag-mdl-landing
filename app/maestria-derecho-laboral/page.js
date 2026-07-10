@@ -591,7 +591,7 @@ export default function IAPage() {
                 Invierte en tu futuro con el respaldo de la UAG
               </h2>
               <p style={{ fontSize:"1.05rem", color:"#555", lineHeight:1.75, marginBottom:"1.5rem" }}>
-                Conoce las opciones de apoyo que la UAG tiene para ti. Al inscribirte en el momento indicado, podrás acceder a <strong>beca + bono</strong>, además de contar con alternativas de financiamiento a través de <strong>LAUDEX</strong>, para que nada detenga tu desarrollo profesional.
+                <strong style={{ color:"#7a2531" }}>Beca + bono disponibles por tiempo limitado para alumnos de nuevo ingreso.</strong> Conoce las opciones de apoyo que la UAG tiene para ti y accede a alternativas de financiamiento a través de <strong>LAUDEX</strong>, para que nada detenga tu desarrollo profesional.
               </p>
               <div style={{ display:"flex", flexDirection:"column", gap:"0.7rem", marginBottom:"1.5rem" }}>
                 {["Inscríbete a tiempo y obtén beca + bono disponibles para nuevo ingreso","Opciones de financiamiento educativo con LAUDEX","Asesoría personalizada para encontrar la alternativa que mejor se adapte a tu perfil"].map((t,i)=>(
@@ -600,6 +600,19 @@ export default function IAPage() {
                     <span style={{ fontSize:"0.93rem", color:"#555" }}>{t}</span>
                   </div>
                 ))}
+              </div>
+              {/* Precios */}
+              <div style={{ marginTop:"1.2rem", padding:"1rem 1.2rem", background:"#f9f9f9", borderRadius:"10px", border:"1px solid #eee" }}>
+                <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.78rem", fontWeight:700, color:"#7a2531", marginBottom:"0.5rem", textTransform:"uppercase", letterSpacing:"0.05em" }}>Inversión en tu formación</p>
+                <p style={{ fontSize:"0.87rem", color:"#555", lineHeight:1.7, marginBottom:"0.3rem" }}>
+                  <strong>Licenciaturas:</strong> Mensualidades desde <strong style={{ color:"#7a2531" }}>$4,200 MXN</strong>
+                </p>
+                <p style={{ fontSize:"0.87rem", color:"#555", lineHeight:1.7, marginBottom:"0.6rem" }}>
+                  <strong>Posgrados:</strong> Mensualidades desde <strong style={{ color:"#7a2531" }}>$7,300 MXN</strong>
+                </p>
+                <p style={{ fontSize:"0.71rem", color:"#aaa", lineHeight:1.5 }}>
+                  *Mensualidades después de beca + bono. *Cuota considerando 3 materias en licenciaturas y 2 en posgrados. *Aplican restricciones.
+                </p>
               </div>
             </div>
             {/* Testimonial mockup */}
@@ -891,7 +904,7 @@ export default function IAPage() {
       {/* ── STICKY BAR ── */}
       <div className={`sticky-bar ${scrollY>400?"show":""}`}>
         <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.9rem", fontWeight:600, color:"#fff" }}>
-          🎓 Ing. en Inteligencia Artificial Online · <span style={{ color:"#f59700" }}>Beca + Bono disponibles</span>
+          🎓 <strong>Maestría en Derecho Laboral Online</strong> · <span style={{ color:"#f59700" }}>Beca + Bono disponibles</span>
         </p>
         <a href="#formulario">
           <button className="btn-orange" style={{ whiteSpace:"nowrap", padding:"0.55rem 1.5rem" }}>HABLA CON UN ASESOR</button>
