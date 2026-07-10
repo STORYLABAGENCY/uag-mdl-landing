@@ -8,7 +8,7 @@ const supabase = createClient(
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im51bWp2dHp6Zmp6eHF1b29uY3Z2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1ODQ5NDIsImV4cCI6MjA5MzE2MDk0Mn0.OB6rFFQVL2OBUUVmyBF3SuLilwJUegw7xWTxgb_C2oI"
 );
 
-const LOGO_URL = "https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/online%20logo%201%20(1).png";
+const LOGO_URL = "/online logo 1 (1).png";
 
 const RAZONES = [
   { num:"01", titulo:"Derecho laboral estratégico para organizaciones modernas", desc:"Aprende a prevenir riesgos laborales, fortalecer el cumplimiento normativo y gestionar relaciones laborales con una visión estratégica que va más allá del litigio tradicional." },
@@ -305,7 +305,7 @@ export default function IAPage() {
       {/* ── NAV ── */}
       <nav className={`nav-ia ${scrollY>50?"scrolled":""}`}>
         <img
-          src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/Logo%20UAG-01.png"
+          src="/Logo UAG-01.png"
           alt="UAG Online"
           style={{ height:"58px", objectFit:"contain", objectPosition:"left" }}
         />
@@ -320,7 +320,7 @@ export default function IAPage() {
         {/* IZQUIERDA — imagen, oculta en móvil */}
         <div className="hero-img-col" style={{ position:"relative", overflow:"hidden", minHeight:"480px" }}>
           <img
-            src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/IMAGEN%203.1.png"
+            src="/IMAGEN 3.1.png"
             alt="Estudiante UAG Online"
             style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center 30%", display:"block" }}
           />
@@ -495,7 +495,7 @@ export default function IAPage() {
             <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.74rem", fontWeight:700, color:"#f59700", letterSpacing:"0.14em", textTransform:"uppercase", marginBottom:"0.5rem" }}>ALIANZA INTERNACIONAL</p>
             <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.4rem,3vw,2rem)", fontWeight:800, color:"#333", display:"flex", alignItems:"center", gap:"0.8rem", flexWrap:"wrap" }}>
               Lo que obtienes con
-              <img src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/asu.png" alt="Arizona State University" style={{ height:"40px", objectFit:"contain" }} />
+              <img src="/asu.png" alt="Arizona State University" style={{ height:"40px", objectFit:"contain" }} />
             </h2>
             <div style={{ width:"60px", height:"3px", background:"#f59700", marginTop:"0.6rem" }} />
           </div>
@@ -537,7 +537,7 @@ export default function IAPage() {
                               ))}
                             </div>
                           </div>
-                          <audio ref={audioRef} preload="auto"><source src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/UAG_1.mp3" type="audio/mpeg" /></audio>
+                          <audio ref={audioRef} preload="auto"><source src="/UAG_1.mp3" type="audio/mpeg" /></audio>
                         </div>
                       </div>
                       {[["Maya","¡Hola! Hoy practicaremos listening. ¿Listo?",false],["Tú","Yes, I'm ready!",true],["Maya","Great! Describe your ideal workplace in 3 sentences.",false]].map(([who,msg,isMe],i)=>(
@@ -643,7 +643,7 @@ export default function IAPage() {
       <section style={{ padding:"4rem 2rem", background:"#f9f9f9", borderTop:"3px solid #f59700" }}>
         <div style={{ maxWidth:"1100px", margin:"0 auto" }}>
           <div style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:"1rem", marginBottom:"0.4rem", flexWrap:"wrap" }}>
-            <img src="https://numjvtzzfjzxquooncvv.supabase.co/storage/v1/object/public/assets/Logo%20UAG-01.png" alt="UAG" style={{ height:"52px", objectFit:"contain" }} />
+            <img src="/Logo UAG-01.png" alt="UAG" style={{ height:"52px", objectFit:"contain" }} />
             <h2 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.3rem,3vw,1.8rem)", fontWeight:800, color:"#333" }}>Respaldo UAG</h2>
           </div>
           <div style={{ width:"50px", height:"3px", background:"#f59700", margin:"0 auto 2.5rem" }} />
