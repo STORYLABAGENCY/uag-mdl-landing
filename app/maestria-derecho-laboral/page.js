@@ -365,7 +365,7 @@ export default function IAPage() {
             {[
               { num:"100%", label:"Online: Estudia desde cualquier lugar con clases en vivo y grabadas", color:"#7a2531" },
               { num:"6", label:"Cuatrimestres: Concluye tu maestría en 2 años", color:"#f59700" },
-              { num:"81%", label:"de alumnos trabajan mientras estudian", color:"#7a2531" },
+              { num:"$7,300", label:"MXN/mes — Mensualidad después de beca + bono. Aplican restricciones.", color:"#7a2531" },
             ].map((m,i)=>(
               <div key={i} style={{ padding:"1.2rem", background:"#f9f9f9", borderRadius:"10px", border:`2px solid ${m.color}22` }}>
                 <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"1.8rem", fontWeight:900, color:m.color, lineHeight:1, marginBottom:"0.3rem" }}>{m.num}</p>
@@ -603,15 +603,12 @@ export default function IAPage() {
               </div>
               {/* Precios */}
               <div style={{ marginTop:"1.2rem", padding:"1rem 1.2rem", background:"#f9f9f9", borderRadius:"10px", border:"1px solid #eee" }}>
-                <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.78rem", fontWeight:700, color:"#7a2531", marginBottom:"0.5rem", textTransform:"uppercase", letterSpacing:"0.05em" }}>Inversión en tu formación</p>
+                <p style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.78rem", fontWeight:700, color:"#7a2531", marginBottom:"0.4rem", textTransform:"uppercase", letterSpacing:"0.05em" }}>Inversión en tu formación</p>
                 <p style={{ fontSize:"0.87rem", color:"#555", lineHeight:1.7, marginBottom:"0.3rem" }}>
-                  <strong>Licenciaturas:</strong> Mensualidades desde <strong style={{ color:"#7a2531" }}>$4,200 MXN</strong>
-                </p>
-                <p style={{ fontSize:"0.87rem", color:"#555", lineHeight:1.7, marginBottom:"0.6rem" }}>
-                  <strong>Posgrados:</strong> Mensualidades desde <strong style={{ color:"#7a2531" }}>$7,300 MXN</strong>
+                  <strong>Posgrados:</strong> Mensualidades desde <strong style={{ color:"#7a2531" }}>$7,300 MXN</strong> — Aplican restricciones.
                 </p>
                 <p style={{ fontSize:"0.71rem", color:"#aaa", lineHeight:1.5 }}>
-                  *Mensualidades después de beca + bono. *Cuota considerando 3 materias en licenciaturas y 2 en posgrados. *Aplican restricciones.
+                  *Mensualidades después de beca + bono. *Cuota considerando 2 materias.
                 </p>
               </div>
             </div>
