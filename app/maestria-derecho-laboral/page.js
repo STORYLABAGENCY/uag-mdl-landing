@@ -827,6 +827,20 @@ export default function IAPage() {
       </section>
 
 
+
+      {/* ── BOTÓN DESCARGA BROCHURE ── */}
+      <div style={{ textAlign:"center", padding:"2rem", background:"#f9f9f9" }}>
+        <a href="/brochure-mdl.pdf" download target="_blank" rel="noopener noreferrer"
+          style={{ display:"inline-flex", alignItems:"center", gap:"0.7rem",
+            background:"#7a2531", color:"#fff", textDecoration:"none",
+            padding:"0.9rem 2.2rem", borderRadius:"8px",
+            fontFamily:"'Outfit',sans-serif", fontWeight:700, fontSize:"0.95rem",
+            boxShadow:"0 4px 16px rgba(122,37,49,0.3)" }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar Brochure del Programa
+        </a>
+      </div>
+
       {/* ── PROCESO DE ADMISIÓN ── */}
       <section style={{ padding:"4rem 2rem", background:"#fff" }} ref={admRef}>
         <div style={{ maxWidth:"1100px", margin:"0 auto" }}>
