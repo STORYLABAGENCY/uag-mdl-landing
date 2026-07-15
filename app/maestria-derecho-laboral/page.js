@@ -330,6 +330,12 @@ export default function IAPage() {
         {/* DERECHA — fondo #7a2531, sin logo, con espacio generoso */}
         <div id="formulario" style={{ background:"#7a2531", display:"flex", flexDirection:"column", justifyContent:"center", padding:"3rem 2.5rem", overflow:"hidden" }}>
 
+          {/* Badge inicio de clases */}
+          <div style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:"rgba(245,151,0,0.2)", border:"1px solid rgba(245,151,0,0.5)", borderRadius:"100px", padding:"0.35rem 1rem", marginBottom:"1rem", width:"fit-content" }}>
+            <span style={{ width:"8px", height:"8px", borderRadius:"50%", background:"#f59700", flexShrink:0 }} />
+            <span style={{ fontFamily:"'Outfit',sans-serif", fontSize:"0.8rem", fontWeight:700, color:"#f59700" }}>Inicio de clases: 7 de septiembre de 2026</span>
+          </div>
+
           {/* Headline */}
           <h1 style={{ fontFamily:"'Outfit',sans-serif", fontSize:"clamp(1.3rem,2.2vw,2rem)", fontWeight:900, color:"#fff", lineHeight:1.12, letterSpacing:"-0.01em", marginBottom:"0.8rem" }}>
             Lidera las relaciones laborales del futuro con la{" "}
